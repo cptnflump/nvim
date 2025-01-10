@@ -17,3 +17,5 @@ vim.keymap.set('n', '<leader>td', function()
   )
   vim.cmd(command)
 end, { noremap = true, silent = true, desc = "Run nearest test in terminal split" })
+
+vim.keymap.set('n', '<leader>rd', function() vim.cmd("split | terminal OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES rails s -p 3002") end, { desc = "Start local rails server in debug" })
