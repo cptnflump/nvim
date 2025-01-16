@@ -12,6 +12,19 @@ return {
   },
   config = function()
     require('telescope').setup {
+      defaults = {
+        vimgrep_arguments = {
+          'rg',
+          '--color=never',
+          '--no-heading',
+          '--with-filename',
+          '--line-number',
+          '--column',
+          '--smart-case',
+          '--fixed-strings',
+          '--hidden'
+        }
+      },
       extensions = {
         fzy_native = {
           override_generic_sorter = false,

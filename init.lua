@@ -1,7 +1,7 @@
 require("config.lazy")
 
 require("catppuccin").setup({
-  flavour = "mocha",
+ flavour = "macchiato",
   integrations = {
    treesitter = true,
    nvimtree = true

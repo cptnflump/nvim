@@ -61,6 +61,26 @@ vim.api.nvim_set_keymap("n", "<leader>rr", ":lua vim.lsp.buf.format()<CR>", { no
 vim.api.nvim_set_keymap("n", "<leader>gd", ":lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
 
 -- Alpha startup keybind
-vim.api.nvim_set_keymap("n", "<leader>aa", [[:lua if vim.bo.filetype ~= "alpha" then vim.cmd("rightbelow vsplit | Alpha | only | NvimTreeFocus") end<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>aa", [[:lua if vim.bo.filetype ~= "alpha" then vim.cmd("rightbelow vsplit | Alpha | only") end<CR>]], { noremap = true, silent = true })
 
 vim.keymap.set('n', '<leader>db', ':DBUI<CR>', { noremap = true, silent = true })
+
+-- blocking d register for debugger line 
+vim.api.nvim_set_keymap('n', 'q', [[:lua BlockOverwriteForD()<CR>]], { noremap = true, silent = true })
+
+function BlockOverwriteForD()
+    local register = vim.fn.getcharstr() -- Get the register being recorded to
+    if register == 'd' then
+        local current_macro = vim.fn.getreg('d') -- Check the content of register 'd'
+        if current_macro ~= "" then
+            print("Cannot overwrite macro in register 'd'.")
+            return
+        end
+    end
+    vim.cmd("normal! q" .. register) -- Proceed with recording if it's not 'd' or if 'd' is empty
+end
+
+-- setting fold config 
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevel = 99
+
