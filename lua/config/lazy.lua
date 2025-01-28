@@ -84,3 +84,5 @@ end
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99
 
+-- keymap for search and replace 
+vim.api.nvim_set_keymap('n', '<leader>sr', ':%s//gc<Left><Left><Left>', { noremap = true, silent = false })

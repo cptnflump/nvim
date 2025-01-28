@@ -38,3 +38,5 @@ require("config.neotest")
 
 require("mason")
 require("config.mason")
+
+require("config.lazydocker")
