@@ -11,7 +11,7 @@ return {
     dependencies = { 'williamboman/mason.nvim', 'neovim/nvim-lspconfig' },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "solargraph" }, -- Automatically install Solargraph
+        ensure_installed = { "ruby_lsp", "solargraph" }, -- Automatically install ruby_lsp
       })
     end,
   },
@@ -24,16 +24,6 @@ return {
       require("mason-lspconfig").setup_handlers({
         function(server_name) -- Default handler for all installed servers
           lspconfig[server_name].setup({})
-        end,
-        ["solargraph"] = function()
-          lspconfig.solargraph.setup({
-            settings = {
-              solargraph = {
-                diagnostics = true, -- Enable diagnostics
-                formatting = false,  -- Enable formatting if desired
-              }
-            }
-          })
         end,
       })
     end,
@@ -72,20 +62,5 @@ return {
       })
     end,
   },
-    {
-    'jose-elias-alvarez/null-ls.nvim',
-    dependencies = { 'nvim-lua/plenary.nvim' }, -- required dependency for null-ls
-    config = function()
-      local null_ls = require("null-ls")
-
-      null_ls.setup({
-        sources = {
-          -- Configure RuboCop as a diagnostic and formatter
-          null_ls.builtins.diagnostics.rubocop, -- RuboCop for linting/diagnostics
-          null_ls.builtins.formatting.rubocop,  -- RuboCop for formatting
-        },
-      })
-    end,
-  }
 }
 
