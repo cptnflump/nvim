@@ -25,6 +25,11 @@ return {
         function(server_name) -- Default handler for all installed servers
           lspconfig[server_name].setup({})
         end,
+        ["ruby_lsp"] = function()
+          lspconfig.ruby_lsp.setup({
+            filetypes = { "ruby", "!erb" }, -- Exclude erb files
+          })
+        end,
       })
     end,
   },

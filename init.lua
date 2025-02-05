@@ -40,3 +40,35 @@ require("mason")
 require("config.mason")
 
 require("config.lazydocker")
+
+require("codecompanion").setup({
+  adapters = {
+    ollama_deepseek = function()
+      return require("codecompanion.adapters").extend("ollama", {
+        name = "ollama_deepseek", -- Give this adapter a different name to differentiate it from the default ollama adapter
+        schema = {
+          model = {
+            default = "deepseek-coder-v2",
+          },
+        },
+      })
+    end,
+  },
+  strategies = {
+    chat = {
+      adapter = "ollama_deepseek",
+    },
+    inline = {
+      adapter = "ollama_deepseek",
+    }
+  },
+  display = {
+    diff = {
+      provider = "mini_diff",
+    },
+  }
+})
+
+require("config.codecompanion")
+
+require("mini.diff").setup()
