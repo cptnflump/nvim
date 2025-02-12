@@ -48,7 +48,7 @@ require("codecompanion").setup({
         name = "ollama_deepseek", -- Give this adapter a different name to differentiate it from the default ollama adapter
         schema = {
           model = {
-            default = "deepseek-coder-v2",
+            default = "deepseek-r1:14b",
           },
         },
       })

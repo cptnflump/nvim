@@ -28,4 +28,4 @@ solargraph scan
 If you would like to have a functioning LLM install, you will need to run: 
 
 brew install ollama
-ollama pull deepseek-coder-v2
+ollama pull deepseek-r1:14b 
