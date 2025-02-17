@@ -30,6 +30,11 @@ return {
             filetypes = { "ruby", "!erb" }, -- Exclude erb files
           })
         end,
+        ["solargraph"] = function()
+          lspconfig.solargraph.setup({
+            formatting = false
+          })
+        end,
       })
     end,
   },
