@@ -7,19 +7,28 @@ brew installed
 then run 
 
 brew install neovim 
+
 brew install tree-sitter
+
 brew install ripgrep 
+
 brew install universal-ctags
+
 brew install font-hack-nerd-font
 
 then run 
 
 gem install debug 
-gem install solargraph
-gem install solargraph-rails 
+
+gem install solargraph -- THIS MIGHT NOT BE NEEDED?
+
+gem install solargraph-rails -- THIS MIGHT NOT BE NEEDED? 
+
 gem install rubocop -- THIS MIGHT NOT BE NEEDED?
+
 gem install rubocop-rails -- THIS MIGHT NOT BE NEEDED?
-gem install ruby-lsp 
+
+gem install ruby-lsp -- THIS MIGHT NOT BE NEEDED?
 
 then run 
 
@@ -28,4 +37,7 @@ solargraph scan
 If you would like to have a functioning LLM install, you will need to run: 
 
 brew install ollama
+
 ollama pull deepseek-r1:14b 
+
+ollama pull deepseek-coder-v2
