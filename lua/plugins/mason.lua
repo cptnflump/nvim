@@ -27,7 +27,7 @@ return {
         end,
         ["ruby_lsp"] = function()
           lspconfig.ruby_lsp.setup({
-            filetypes = { "ruby", "!erb" }, -- Exclude erb files
+            --filetypes = { "ruby", "!erb" }, -- Exclude erb files
           })
         end,
         ["solargraph"] = function()

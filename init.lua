@@ -61,11 +61,23 @@ require("codecompanion").setup({
   },
   adapters = {
     ollama_deepseek = function()
-      return require("codecompanion.adapters").extend("ollama", {
+      return require("codecompanion.adapters").extend("ollama", 
+      {
         name = "ollama_deepseek", -- Give this adapter a different name to differentiate it from the default ollama adapter
         schema = {
           model = {
             default = "deepseek-r1:14b",
+          },
+        },
+      })
+    end,
+    ollama_deepseek_coder = function()
+      return require("codecompanion.adapters").extend("ollama",
+      {
+        name = "ollama_deepseek_coder", 
+        schema = {
+          model = {
+            default = "deepseek-coder-v2:latest",
           },
         },
       })
