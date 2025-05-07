@@ -24,7 +24,6 @@ return {
 
      vim.diagnostic.config({ virtual_text = true })
 
-     vim.lsp.enable('solargraph')
      vim.lsp.enable('ruby_lsp')
     end,
   },
