@@ -58,7 +58,11 @@ vim.opt.number = true
 
 -- rubocop keybind
 vim.api.nvim_set_keymap("n", "<leader>rr", ":lua vim.lsp.buf.format()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>rf", ":Format<CR>", { noremap = true, silent = true })
+
+-- LSP go to definition
 vim.api.nvim_set_keymap("n", "<leader>gd", ":lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+
 
 -- Alpha startup keybind
 vim.api.nvim_set_keymap("n", "<leader>aa", [[:lua if vim.bo.filetype ~= "alpha" then vim.cmd("rightbelow vsplit | Alpha | only") end<CR>]], { noremap = true, silent = true })

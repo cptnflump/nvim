@@ -11,31 +11,21 @@ return {
     dependencies = { 'williamboman/mason.nvim', 'neovim/nvim-lspconfig' },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "ruby_lsp", "solargraph" }, -- Automatically install ruby_lsp
+        ensure_installed = { "ruby_lsp" }, -- Automatically install ruby_lsp
       })
     end,
   },
   {
     'neovim/nvim-lspconfig',
     config = function()
-      local lspconfig = require('lspconfig')
+      vim.lsp.config['solargraph'] = {
+        formatting = false
+      }
 
-      -- Use mason-lspconfig to integrate Solargraph with lspconfig
-      require("mason-lspconfig").setup_handlers({
-        function(server_name) -- Default handler for all installed servers
-          lspconfig[server_name].setup({})
-        end,
-        ["ruby_lsp"] = function()
-          lspconfig.ruby_lsp.setup({
-            --filetypes = { "ruby", "!erb" }, -- Exclude erb files
-          })
-        end,
-        ["solargraph"] = function()
-          lspconfig.solargraph.setup({
-            formatting = false
-          })
-        end,
-      })
+     vim.diagnostic.config({ virtual_text = true })
+
+     vim.lsp.enable('solargraph')
+     vim.lsp.enable('ruby_lsp')
     end,
   },
   -- Autocompletion plugin setup
@@ -72,5 +62,19 @@ return {
       })
     end,
   },
+  { 
+    "mhartington/formatter.nvim",
+    config = function()
+      local formatter = require('formatter')
+      local util = require('formatter.util')
+      formatter.setup({
+        filetype = {
+          eruby = {
+            require("formatter.filetypes.eruby").htmlbeautifier
+          }
+        }
+      })
+    end
+  }
 }
 
