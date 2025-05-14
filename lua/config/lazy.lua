@@ -43,6 +43,7 @@ vim.opt.shiftwidth = 2        -- Number of spaces to use for each indentation le
 vim.opt.tabstop = 2           -- Number of spaces a <Tab> counts for
 vim.opt.softtabstop = 2       -- Number of spaces for <Tab> when editing
 vim.opt.undofile = true
+vim.opt.wrap = false
 
 -- terminal shortcut
 function OpenTerminalInBottomSplit()

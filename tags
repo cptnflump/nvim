@@ -74,7 +74,7 @@ branch	lazy-lock.json	/^  "markview.nvim": { "branch": "main", "commit": "01a201
 branch	lazy-lock.json	/^  "mason-lspconfig.nvim": { "branch": "main", "commit": "d39a75bbce4b8aad5d627191ea915179c77c100/;"	s	object:mason-lspconfig.nvim
 branch	lazy-lock.json	/^  "mason.nvim": { "branch": "main", "commit": "7c7318e8bae7e3536ef6b9e86b9e38e74f2e125e" },$/;"	s	object:mason.nvim
 branch	lazy-lock.json	/^  "mini.diff": { "branch": "main", "commit": "ec8a5ae365c5d15920721ea42b1351dbc9e61f2d" },$/;"	s	object:mini.diff
-branch	lazy-lock.json	/^  "neotest": { "branch": "master", "commit": "f0edc1dafdb04ae51a3863c1c5e4268d7462931b" },$/;"	s	object:neotest
+branch	lazy-lock.json	/^  "neotest": { "branch": "master", "commit": "2d9011396c43fa1d40221e6b6c3be5eb001427a9" },$/;"	s	object:neotest
 branch	lazy-lock.json	/^  "neotest-rspec": { "branch": "main", "commit": "281c0ed0e55d623e8028796e1c4dc27b7e421fd0" },$/;"	s	object:neotest-rspec
 branch	lazy-lock.json	/^  "nui.nvim": { "branch": "main", "commit": "f535005e6ad1016383f24e39559833759453564e" },$/;"	s	object:nui.nvim
 branch	lazy-lock.json	/^  "nvim-cmp": { "branch": "main", "commit": "b5311ab3ed9c846b585c0c15b7559be131ec4be9" },$/;"	s	object:nvim-cmp
@@ -121,7 +121,7 @@ commit	lazy-lock.json	/^  "markview.nvim": { "branch": "main", "commit": "01a201
 commit	lazy-lock.json	/^  "mason-lspconfig.nvim": { "branch": "main", "commit": "d39a75bbce4b8aad5d627191ea915179c77c100/;"	s	object:mason-lspconfig.nvim
 commit	lazy-lock.json	/^  "mason.nvim": { "branch": "main", "commit": "7c7318e8bae7e3536ef6b9e86b9e38e74f2e125e" },$/;"	s	object:mason.nvim
 commit	lazy-lock.json	/^  "mini.diff": { "branch": "main", "commit": "ec8a5ae365c5d15920721ea42b1351dbc9e61f2d" },$/;"	s	object:mini.diff
-commit	lazy-lock.json	/^  "neotest": { "branch": "master", "commit": "f0edc1dafdb04ae51a3863c1c5e4268d7462931b" },$/;"	s	object:neotest
+commit	lazy-lock.json	/^  "neotest": { "branch": "master", "commit": "2d9011396c43fa1d40221e6b6c3be5eb001427a9" },$/;"	s	object:neotest
 commit	lazy-lock.json	/^  "neotest-rspec": { "branch": "main", "commit": "281c0ed0e55d623e8028796e1c4dc27b7e421fd0" },$/;"	s	object:neotest-rspec
 commit	lazy-lock.json	/^  "nui.nvim": { "branch": "main", "commit": "f535005e6ad1016383f24e39559833759453564e" },$/;"	s	object:nui.nvim
 commit	lazy-lock.json	/^  "nvim-cmp": { "branch": "main", "commit": "b5311ab3ed9c846b585c0c15b7559be131ec4be9" },$/;"	s	object:nvim-cmp
@@ -160,7 +160,7 @@ markview.nvim	lazy-lock.json	/^  "markview.nvim": { "branch": "main", "commit": 
 mason-lspconfig.nvim	lazy-lock.json	/^  "mason-lspconfig.nvim": { "branch": "main", "commit": "d39a75bbce4b8aad5d627191ea915179c77c100/;"	o
 mason.nvim	lazy-lock.json	/^  "mason.nvim": { "branch": "main", "commit": "7c7318e8bae7e3536ef6b9e86b9e38e74f2e125e" },$/;"	o
 mini.diff	lazy-lock.json	/^  "mini.diff": { "branch": "main", "commit": "ec8a5ae365c5d15920721ea42b1351dbc9e61f2d" },$/;"	o
-neotest	lazy-lock.json	/^  "neotest": { "branch": "master", "commit": "f0edc1dafdb04ae51a3863c1c5e4268d7462931b" },$/;"	o
+neotest	lazy-lock.json	/^  "neotest": { "branch": "master", "commit": "2d9011396c43fa1d40221e6b6c3be5eb001427a9" },$/;"	o
 neotest-rspec	lazy-lock.json	/^  "neotest-rspec": { "branch": "main", "commit": "281c0ed0e55d623e8028796e1c4dc27b7e421fd0" },$/;"	o
 nui.nvim	lazy-lock.json	/^  "nui.nvim": { "branch": "main", "commit": "f535005e6ad1016383f24e39559833759453564e" },$/;"	o
 nvim-cmp	lazy-lock.json	/^  "nvim-cmp": { "branch": "main", "commit": "b5311ab3ed9c846b585c0c15b7559be131ec4be9" },$/;"	o
